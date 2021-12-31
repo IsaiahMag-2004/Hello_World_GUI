@@ -32,6 +32,7 @@ submit_button.grid(row=0, column=1, padx=10, pady=10, ipadx=10)
 
 #Create radio buttons for text display
 capitalization = StringVar()
+capitalization.set("normal")
 normal_button = tkinter.Radiobutton(input_frame, text="Normal Case", variable=capitalization, value="normal", bg=input_color).grid(row=1, column=0, pady=(0, 5))
 Upper_button = tkinter.Radiobutton(input_frame, text="Upper Case", variable=capitalization, value="upper", bg=input_color).grid(row=1, column=1, pady=(0, 5))
 
