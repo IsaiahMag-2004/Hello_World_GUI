@@ -22,9 +22,9 @@ def submit():
     global submit
     username = name.get()
     if capitalization.get() == "normal":
-        output_label = tkinter.Label(output_frame, text=(f"Hello {name.get()}! Keep learning Tkinter!")).pack()
+        output_label = tkinter.Label(output_frame, text=(f"Hello {username.title()}! Keep learning Tkinter!"), bg=output_color).pack()
     else:
-        output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!")).pack()
+        output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!"), bg=output_color).pack()
 #Define Frames
 input_frame = tkinter.LabelFrame(root, bg=input_color)
 output_frame = tkinter.LabelFrame(root, bg=output_color)
