@@ -16,15 +16,15 @@ input_color = "#bb4430"
 output_color = "#7ebdc2"
 root.config(bg=root_color)
 
-# #Define Functions
-# def submit():
-#     """Submits the name, and outputs a hello message to the user"""
-#     global submit
-#     username = name.get()
-#     if capitalization == "normal":
-#         output_label = tkinter.Label(output_frame, text=(f"Hello {name.get()}! Keep learning Tkinter!")).pack()
-#     else:
-#         output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!")).pack()
+#Define Functions
+def submit():
+    """Submits the name, and outputs a hello message to the user"""
+    global submit
+    username = name.get()
+    if capitalization.get() == "normal":
+        output_label = tkinter.Label(output_frame, text=(f"Hello {name.get()}! Keep learning Tkinter!")).pack()
+    else:
+        output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!")).pack()
 #Define Frames
 input_frame = tkinter.LabelFrame(root, bg=input_color)
 output_frame = tkinter.LabelFrame(root, bg=output_color)
@@ -47,15 +47,5 @@ Upper_button = tkinter.Radiobutton(input_frame, text="Upper Case", variable=capi
 smile_image = tkinter.PhotoImage(file="smile.png")
 image_label = tkinter.Label(output_frame, image=smile_image, bg=output_color).pack()
 
-#Define Functions
-def submit():
-    """Submits the name, and outputs a hello message to the user"""
-    global submit
-    username = name.get()
-    if capitalization == "normal":
-        output_label = tkinter.Label(output_frame, text=(f"Hello {name.get()}! Keep learning Tkinter!")).pack()
-    else:
-        output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!")).pack()
-        
 #Run root main loop
 root.mainloop()
