@@ -36,5 +36,8 @@ capitalization.set("normal")
 normal_button = tkinter.Radiobutton(input_frame, text="Normal Case", variable=capitalization, value="normal", bg=input_color).grid(row=1, column=0, pady=(0, 5))
 Upper_button = tkinter.Radiobutton(input_frame, text="Upper Case", variable=capitalization, value="upper", bg=input_color).grid(row=1, column=1, pady=(0, 5))
 
+#Create image
+smile_image = tkinter.PhotoImage(file="smile.png")
+image_label = tkinter.Label(output_frame, image=smile_image, bg=output_color).pack()
 #Run root main loop
 root.mainloop()
