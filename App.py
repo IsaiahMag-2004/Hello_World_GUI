@@ -16,8 +16,15 @@ input_color = "#bb4430"
 output_color = "#7ebdc2"
 root.config(bg=root_color)
 
-#Define Functions
-
+# #Define Functions
+# def submit():
+#     """Submits the name, and outputs a hello message to the user"""
+#     global submit
+#     username = name.get()
+#     if capitalization == "normal":
+#         output_label = tkinter.Label(output_frame, text=(f"Hello {name.get()}! Keep learning Tkinter!")).pack()
+#     else:
+#         output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!")).pack()
 #Define Frames
 input_frame = tkinter.LabelFrame(root, bg=input_color)
 output_frame = tkinter.LabelFrame(root, bg=output_color)
@@ -26,7 +33,7 @@ output_frame.pack(padx=10, pady=(0, 10), fill=BOTH, expand=True)
 
 #Create Widgets
 name = tkinter.Entry(input_frame, text="Enter your name", width=15)
-submit_button = tkinter.Button(input_frame, text="Submit")
+submit_button = tkinter.Button(input_frame, text="Submit", command=submit)
 name.grid(row=0, column=0, padx=10, pady=10)
 submit_button.grid(row=0, column=1, padx=10, pady=10, ipadx=10)
 
@@ -39,5 +46,16 @@ Upper_button = tkinter.Radiobutton(input_frame, text="Upper Case", variable=capi
 #Create image
 smile_image = tkinter.PhotoImage(file="smile.png")
 image_label = tkinter.Label(output_frame, image=smile_image, bg=output_color).pack()
+
+#Define Functions
+def submit():
+    """Submits the name, and outputs a hello message to the user"""
+    global submit
+    username = name.get()
+    if capitalization == "normal":
+        output_label = tkinter.Label(output_frame, text=(f"Hello {name.get()}! Keep learning Tkinter!")).pack()
+    else:
+        output_label = tkinter.Label(output_frame, text=(f"HELLO {username.upper()}! KEEP LEARNING TKINTER!")).pack()
+        
 #Run root main loop
 root.mainloop()
