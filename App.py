@@ -25,10 +25,10 @@ input_frame.pack(pady=10) #Using pady so that nothing is right up against the to
 output_frame.pack(padx=10, pady=(0, 10), fill=BOTH, expand=True)
 
 #Create Widgets
-name = tkinter.Entry(input_frame, text="Enter your name", width=20)
+name = tkinter.Entry(input_frame, text="Enter your name", width=15)
 submit_button = tkinter.Button(input_frame, text="Submit")
 name.grid(row=0, column=0, padx=10, pady=10)
-submit_button.grid(row=0, column=1, padx=10, pady=10, ipadx=20)
+submit_button.grid(row=0, column=1, padx=10, pady=10, ipadx=10)
 
 #Run root main loop
 root.mainloop()
