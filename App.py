@@ -22,7 +22,7 @@ root.config(bg=root_color)
 input_frame = tkinter.LabelFrame(root, bg=input_color)
 output_frame = tkinter.LabelFrame(root, bg=output_color)
 input_frame.pack(pady=10) #Using pady so that nothing is right up against the top of the window
-output_frame.pack()
+output_frame.pack(padx=10, pady=(0, 10), fill=BOTH, expand=True)
 
 #Create Widgets
 name = tkinter.Entry(input_frame, text="Enter your name", width=20)
